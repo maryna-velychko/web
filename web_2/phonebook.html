@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonebook</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-light">
+          <a class="navbar-brand" href="#">
+            <img src="phone.png" alt="Phonebook" style="width:40px;">
+          </a>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="about.html"> About </a></li>
+            <li class="nav-item"><a class="nav-link" href="registration.html"> Registration </a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html"> Login </a></li>
+            <li class="nav-item"><a class="nav-link" href="view.html"> View profile </a></li>
+            <li class="nav-item"><a class="nav-link" href="phonebook.html"> Main </a></li>
+        </ul>
+        </nav>
+      </div>
+    <h1 align="center">Phonebook</h1>
+    <main class="main main-contacts">
+        <div class="table-responsive-lg">
+            <table class="table table-sm table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">№</th>
+                    <th scope="col">Surname</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col"></th>
+                </tr>
+                </thead>
+                <tbody class="contacts-main"></tbody>
+            </table>
+            </div>
+        <div class="col-12">
+            <form>
+                <button type="button" class="btn btn-dark btn-sm sort-btn" name="Alphabetical">Alphabetical order</button>
+                <button type="button" class="btn btn-dark btn-sm reverse-btn" name="Reverse">Reverse order</button>
+            </form>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div class="col-md-4">
+            <div class="input-group mb-3 d-flex flex-wrap contacts-change">
+              <input type="number" min="1" required class="form-control contacts-id-change" placeholder="Id"/>
+              <input type="text" required class="form-control contacts-name-change" placeholder="New name"/>
+              <input type="tel" required class="form-control contacts-phone-change" placeholder="New phone"/>
+                <button class="btn btn-dark" id="change-btn" type="button">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form1">
+            <h2 align="center">Add new subscriber</h4>
+            <form method="post">
+                <input type="text" name="surname" required placeholder="Enter surmane" class="form-control  form-control-sm contacts-input-name" maxlength="30"/><br>
+                <input type="tel" name="phone" required placeholder="Enter phone number" class="form-control  form-control-sm contacts-input-phone"/><br>
+                <div class="form-row text-center">
+                    <div class="col-12">
+                        <button type="button" class="btn btn-dark btn-sm" id="add-contact"> Add </button>
+                    </div>
+                </div>
+            </form>
+            </div>
+          </main>
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+      <script src="./js/main.js"></script>
+      <script src="./js/model/Model.js"></script>
+      <script src="./js/view/View.js"></script>
+      <script src="./js/controller/Controller.js"></script>
+      <script src="./js/controller/pages/phonebook.js"></script>
+</body>
+</html>

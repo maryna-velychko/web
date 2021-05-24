@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-light">
+          <a class="navbar-brand" href="#">
+            <img src="phone.png" alt="Phonebook" style="width:40px;">
+          </a>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="about.html"> About </a></li>
+            <li class="nav-item"><a class="nav-link" href="registration.html"> Registration </a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html"> Login </a></li>
+            <li class="nav-item"><a class="nav-link" href="view.html"> View profile </a></li>
+            <li class="nav-item"><a class="nav-link" href="phonebook.html"> Main </a></li>
+        </ul>
+        </nav>
+      </div>
+    <h1 align="center"> Login </h1>
+    <div class="form">
+    <form method="post">
+        <input type="email" required placeholder="Enter email" class="form-control" id="login-email" maxlength="30"/><br>
+        <input type="text" required placeholder="Enter password" class="form-control" id="login-password" minlength="4" maxlength="30"/><br>
+        <button type="submit" class="btn btn-sm btn-light" id="login-btn">log in</button>
+    </form>
+    </div>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/model/Model.js"></script>
+  <script src="./js/view/View.js"></script>
+  <script src="./js/controller/Controller.js"></script>
+  <script src="./js/controller/pages/login.js"></script>
+</body>
+</html>
