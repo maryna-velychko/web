@@ -14,4 +14,4 @@
 -профіль користувача (поля у табличному вигляді)
 -про додаток (емблема додатку, короткий опис додатка)
 -робоча сторінка додатка (розробляється самостійно студентом відповідно до обраної тематики)
-Посиляння на звіт: https://docs.google.com/document/d/1u6fUUvr2Tv_4IBHDYc-tRHeu2i3-N56fPrRawXuMND4/edit.
+Посиляння на звіт: https://docs.google.com/document/d/1hTSJoUI-ox3zK6cj3IL6g_nlOBTTZ1gOSC2Mw3EXA5k/edit.
