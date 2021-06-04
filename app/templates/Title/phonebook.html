@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonebook</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+     <link rel="stylesheet" href="../static/main.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-light">
+          <a class="navbar-brand" href="#">
+             <img src="../static/image/phone.png" alt="Phonebook" style="width:40px;">
+          </a>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}"> About </a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'registration' %}"> Registration </a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'login' %}"> Login </a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'view' %}"> View profile </a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'phonebook' %}"> Main </a></li>
+        </ul>
+        </nav>
+      </div>
+    <h1 align="center">Phonebook</h1>
+    <main class="main main-contacts">
+        <div class="table-responsive-lg">
+            <table class="table table-sm table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">№</th>
+                    <th scope="col">Surname</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col"></th>
+                </tr>
+                </thead>
+                <tbody class="contacts-main">
+                {%for form in forms %}
+                <tr>
+                    <th scope="row">{{form.id}}</th>
+                    <td>{{form.firstname}}</td>
+                    <td>{{form.tel}}</td>
+                    <td>
+                     <button type="button"  class="btn btn-danger btn-sm" name="delete">delete</button>
+                     </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            </div>
+            <form action = "{% url 'sort' %}" method = "get">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-dark btn-sm sort-btn" name="Alphabetical">Alphabetical order</button>
+                </div>
+            </form>
+            <form action = "{% url 'reverse' %}" method = "get">
+            <div class="col-12">
+                <button type="submit" class="btn btn-dark btn-sm reverse-btn" name="Reverse">Reverse order</button>
+            </div>
+            </form>
+
+        <form action = "{% url 'edit' %}" method = "get">
+        <div class="d-flex justify-content-center">
+          <div class="col-md-4">
+            <div class="input-group mb-3 d-flex flex-wrap contacts-change">
+              <input type="number" name="id" min="1" required class="form-control contacts-id-change" placeholder="Id"/>
+              <input type="text" name="name" required class="form-control contacts-name-change" placeholder="New name"/>
+              <input type="tel" name=tel required class="form-control contacts-phone-change" placeholder="New phone"/>
+                <button type="submit" class="btn btn-dark btn-sm" id="change-btn" type="button">+</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        </div>
+        <div class="form1">
+            <h4 align="center">Add new subscriber</h4>
+            <form method="post">
+                 {% csrf_token %} <br>
+                <input type="text" name="surname" required placeholder="Enter surmane" class="form-control  form-control-sm contacts-input-name" maxlength="30"/><br>
+                <input type="tel" name="phone" required placeholder="Enter phone number" class="form-control  form-control-sm contacts-input-phone"/><br>
+                <div class="form-row text-center">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-dark btn-sm" id="add-contact"> Add </button>
+                    </div>
+                </div>
+            </form>
+            </div>
+          </main>
+</body>
+</html>
+
+
